@@ -2,11 +2,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Title of the document</title>
+<title>Un Log In Simple</title>
 </head>
 
 <body>
-Content of the document......
+<h1>Log In</h1>
+<input type="text" id="username" placeholder="Ingresar username"><br>
+<input type="password" id="password" placeholder="Ingresar contraseña"><br>
+<input type="button" id="log-in" value="Log In">
+<h1 id="mensaje"></h1>
+
+<script>
+
+var username = document.getElementById("username");
+var password = document.getElementById("password");
+var submit = document.getElementById("log-in");
+var mensaje = document.getElementById("mensaje");
+
+submit.addEventListener('click', showMessage);
+
+function showMessage() {
+  if (username.value === password.value) {
+    mensaje.innerHTML = "Entraste!";
+  } else {
+    mensaje.innerHTML = "No entraste!";
+  }
+}
+
+</script>
+
 </body>
 
 </html>
