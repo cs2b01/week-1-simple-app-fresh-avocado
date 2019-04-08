@@ -24,8 +24,12 @@ submit.addEventListener('click', showMessage);
 function showMessage() {
   if (username.value === password.value) {
     mensaje.innerHTML = "Entraste!";
+    username.value = "";
+    password.value = "";
   } else {
     mensaje.innerHTML = "No entraste!";
+    username.value = "";
+    password.value = "";
   }
 }
 
